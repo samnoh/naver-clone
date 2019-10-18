@@ -12,51 +12,51 @@
         }
 
         &--title {
+            background: url('../assets/sp_search.png') -4px -4px no-repeat;
+            display: inline-block;
+            height: 48px;
+            overflow: hidden;
             position: relative;
+            text-indent: 100%;
             top: -4px;
             width: 198px;
-            height: 48px;
-            display: inline-block;
-            background: url('../assets/sp_search.png') -4px -4px no-repeat;
-            text-indent: 100%;
-            overflow: hidden;
         }
 
         fieldset {
-            position: relative;
+            border: 2px solid $color-primary;
+            display: inline-block;
+            height: 49px;
             margin-left: 20px;
             padding: 12px 0 12px 10px;
-            width: 521px;
-            height: 49px;
-            display: inline-block;
-            border: 2px solid $color-primary;
+            position: relative;
             vertical-align: middle;
+            width: 521px;
         }
 
         &--input {
+            height: 23px;
             vertical-align: top;
             width: 405px;
-            height: 23px;
         }
 
         &--btn {
-            cursor: pointer;
-            width: 49px;
-            height: 49px;
             background-color: $color-primary;
+            cursor: pointer;
+            height: 49px;
             position: absolute;
             right: -2px;
             top: -2px;
+            width: 49px;
         }
 
         &--image {
-            width: 21px;
-            height: 21px;
             background-image: url('../assets/sp_search.png');
             background-position: -3px -60px;
             background-repeat: no-repeat;
             display: inline-block;
+            height: 21px;
             margin: 14px;
+            width: 21px;
         }
     }
 }

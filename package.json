@@ -6,7 +6,8 @@
     "scripts": {
         "commit": "git-cz",
         "build": "gulp build",
-        "dev": "gulp dev"
+        "dev": "gulp dev",
+        "stylelint": "stylelint src/scss/**/*.scss --fix"
     },
     "repository": {
         "type": "git",
@@ -28,16 +29,19 @@
         "del": "5.1.0",
         "gulp": "4.0.2",
         "gulp-autoprefixer": "6.1.0",
+        "gulp-connect": "5.7.0",
         "gulp-csso": "3.0.1",
         "gulp-htmlmin": "5.0.1",
         "gulp-image": "5.1.0",
         "gulp-sass": "4.0.2",
-        "gulp-connect": "5.7.0",
         "husky": "3.0.9",
-        "node-sass": "4.12.0"
+        "node-sass": "4.12.0",
+        "stylelint": "11.1.1",
+        "stylelint-config-sass-guidelines": "6.1.0"
     },
     "husky": {
         "hooks": {
+            "pre-commit": "npm run stylelint",
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     },
