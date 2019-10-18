@@ -1,0 +1,18 @@
+.header {
+    margin: 0 auto;
+    width: 1080px;
+
+    &__search {
+        h1 {
+            width: 280px;
+        }
+
+        h2 {
+            display: none;
+        }
+
+        fieldset {
+            width: 520px;
+        }
+    }
+}
