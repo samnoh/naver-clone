@@ -1,62 +1,62 @@
 .header {
-    margin: 0 auto;
-    width: 1080px;
+  margin: 0 auto;
+  width: 1080px;
 
-    &__topnav {
-        text-align: right;
+  &__topnav {
+    text-align: right;
+  }
+
+  &__search {
+    a {
+      vertical-align: middle;
     }
 
-    &__search {
-        a {
-            vertical-align: middle;
-        }
-
-        &--title {
-            background: url('../assets/sp_search.png') -4px -4px no-repeat;
-            display: inline-block;
-            height: 48px;
-            overflow: hidden;
-            position: relative;
-            text-indent: 100%;
-            top: -4px;
-            width: 198px;
-        }
-
-        fieldset {
-            border: 2px solid $color-primary;
-            display: inline-block;
-            height: 49px;
-            margin-left: 20px;
-            padding: 12px 0 12px 10px;
-            position: relative;
-            vertical-align: middle;
-            width: 521px;
-        }
-
-        &--input {
-            height: 23px;
-            vertical-align: top;
-            width: 405px;
-        }
-
-        &--btn {
-            background-color: $color-primary;
-            cursor: pointer;
-            height: 49px;
-            position: absolute;
-            right: -2px;
-            top: -2px;
-            width: 49px;
-        }
-
-        &--image {
-            background-image: url('../assets/sp_search.png');
-            background-position: -3px -60px;
-            background-repeat: no-repeat;
-            display: inline-block;
-            height: 21px;
-            margin: 14px;
-            width: 21px;
-        }
+    &--title {
+      background: url('../assets/sp_search.png') -4px -4px no-repeat;
+      display: inline-block;
+      height: 48px;
+      overflow: hidden;
+      position: relative;
+      text-indent: 100%;
+      top: -4px;
+      width: 198px;
     }
+
+    fieldset {
+      border: 2px solid $color-primary;
+      display: inline-block;
+      height: 49px;
+      margin-left: 20px;
+      padding: 12px 0 12px 10px;
+      position: relative;
+      vertical-align: middle;
+      width: 521px;
+    }
+
+    &--input {
+      height: 23px;
+      vertical-align: top;
+      width: 405px;
+    }
+
+    &--btn {
+      background-color: $color-primary;
+      cursor: pointer;
+      height: 49px;
+      position: absolute;
+      right: -2px;
+      top: -2px;
+      width: 49px;
+    }
+
+    &--image {
+      background-image: url('../assets/sp_search.png');
+      background-position: -3px -60px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 21px;
+      margin: 14px;
+      width: 21px;
+    }
+  }
 }

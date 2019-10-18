@@ -7,7 +7,8 @@
         "commit": "git-cz",
         "build": "gulp build",
         "dev": "gulp dev",
-        "stylelint": "stylelint src/scss/**/*.scss --fix"
+        "stylelint": "stylelint src/scss/**/*.scss",
+        "stylelint:format": "npm run stylelint -- --fix"
     },
     "repository": {
         "type": "git",
