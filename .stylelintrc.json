@@ -3,6 +3,7 @@
     "rules": {
         "scss/at-extend-no-missing-placeholder": true,
         "max-nesting-depth": 2,
+        "indentation": 4,
         "declaration-property-value-blacklist": {
             "/^border/": 0
         }
