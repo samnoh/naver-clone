@@ -57,18 +57,24 @@ const assets = () =>
         .pipe(gulp.dest(routes.assets.dest));
 
 // Webserver
-const webserver = () =>
-    gulpConnect.server({
-        root: 'build',
-        port: 3000,
-        livereload: true
-    });
+const webserver = done =>
+    gulpConnect.server(
+        {
+            root: 'build',
+            port: 3000,
+            livereload: true
+        },
+        function() {
+            this.server.on('close', done);
+        }
+    );
 
 // Watch
-const watch = () => {
+const watch = done => {
     gulp.watch(routes.html.watch, html);
     gulp.watch(routes.sass.watch, sass);
     gulp.watch(routes.assets.src, assets);
+    done();
 };
 
 // Run
