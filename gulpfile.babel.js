@@ -5,7 +5,7 @@ import gulpSass from 'gulp-sass';
 import gulpAutoprefixer from 'gulp-autoprefixer';
 import gulpCsso from 'gulp-csso'; // minify CSS
 import gulpImage from 'gulp-image';
-import gulpWebserver from 'gulp-webserver';
+import gulpConnect from 'gulp-connect';
 
 gulpSass.compiler = require('node-sass');
 
@@ -38,7 +38,8 @@ const html = () =>
     gulp
         .src(routes.html.src)
         .pipe(gulpHtml({ collapseWhitespace: true }))
-        .pipe(gulp.dest(routes.html.dest));
+        .pipe(gulp.dest(routes.html.dest))
+        .pipe(gulpConnect.reload());
 
 const sass = () =>
     gulp
@@ -46,7 +47,8 @@ const sass = () =>
         .pipe(gulpSass().on('error', gulpSass.logError))
         .pipe(gulpAutoprefixer({ overrideBrowserslist: ['last 2 versions'] }))
         .pipe(gulpCsso())
-        .pipe(gulp.dest(routes.sass.dest));
+        .pipe(gulp.dest(routes.sass.dest))
+        .pipe(gulpConnect.reload());
 
 const assets = () =>
     gulp
@@ -54,9 +56,13 @@ const assets = () =>
         .pipe(gulpImage())
         .pipe(gulp.dest(routes.assets.dest));
 
-// Live
+// Webserver
 const webserver = () =>
-    gulp.src('build').pipe(gulpWebserver({ livereload: true, open: true, port: 3000 }));
+    gulpConnect.server({
+        root: 'build',
+        port: 3000,
+        livereload: true
+    });
 
 // Watch
 const watch = () => {
