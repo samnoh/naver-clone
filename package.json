@@ -1,0 +1,42 @@
+{
+    "name": "naver-clone",
+    "version": "1.0.0",
+    "description": "Naver Clone",
+    "main": "src/index.html",
+    "scripts": {
+        "commit": "git-cz",
+        "build": "gulp build",
+        "dev": "gulp dev"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/samnoh/naver-clone.git"
+    },
+    "keywords": [],
+    "author": "Sam Noh <samnoh.dev@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/samnoh/naver-clone/issues"
+    },
+    "homepage": "https://github.com/samnoh/naver-clone#readme",
+    "devDependencies": {
+        "@babel/core": "7.6.4",
+        "@babel/preset-env": "7.6.3",
+        "@babel/register": "7.6.2",
+        "cz-conventional-changelog": "3.0.2",
+        "del": "5.1.0",
+        "gulp": "4.0.2",
+        "gulp-autoprefixer": "6.1.0",
+        "gulp-csso": "3.0.1",
+        "gulp-htmlmin": "5.0.1",
+        "gulp-image": "5.1.0",
+        "gulp-sass": "4.0.2",
+        "gulp-webserver": "0.9.1",
+        "node-sass": "4.12.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
