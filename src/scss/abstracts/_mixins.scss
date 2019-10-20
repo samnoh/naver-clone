@@ -1,0 +1,20 @@
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    bottom: $bottom;
+    left: $left;
+    position: $position;
+    right: $right;
+    top: $top;
+}
+
+@mixin absolute($args...) {
+    @include position(absolute, $args...);
+}
+
+@mixin relative($args...) {
+    @include position(relative, $args...);
+}
+
+@mixin h-centered($width) {
+    margin: 0 auto;
+    width: $width;
+}
