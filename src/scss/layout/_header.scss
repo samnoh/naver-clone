@@ -1,3 +1,10 @@
+@mixin sp($width, $height, $x, $y) {
+    background: url('../assets/sp_search.png') $x $y no-repeat;
+    display: inline-block;
+    height: $height;
+    width: $width;
+}
+
 .header {
     @include h-centered(1080px);
 
@@ -12,13 +19,10 @@
 
         &--title {
             @include relative($top: -4px);
-            background: url('../assets/sp_search.png') -4px -4px no-repeat;
-            display: inline-block;
-            height: 48px;
+            @include sp(198px, 48px, -4px, -4px);
             overflow: hidden;
             text-indent: 100%;
             top: -4px;
-            width: 198px;
         }
 
         fieldset {
@@ -46,11 +50,9 @@
             width: 49px;
         }
 
-        &--image {
+        &--icon {
             @include h-centered(21px);
-            background: url('../assets/sp_search.png') -3px -60px no-repeat;
-            display: inline-block;
-            height: 21px;
+            @include sp(21px, 21px, -3px, -60px);
         }
     }
 }
