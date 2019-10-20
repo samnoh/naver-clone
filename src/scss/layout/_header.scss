@@ -1,14 +1,12 @@
-@mixin sp($width, $height, $x, $y) {
-    @include size($width, $height);
-    background: url('../assets/sp_search.png') $x $y no-repeat;
-    display: inline-block;
+@mixin sp-search($args...) {
+    @include sp('../assets/sp_search.png', $args...);
 }
 
 .header {
     @include h-centered(1080px);
 
     &__topnav {
-        text-align: right;
+        float: right;
     }
 
     &__search {
@@ -18,7 +16,7 @@
 
         &--title {
             @include relative($top: -4px);
-            @include sp(198px, 48px, -4px, -4px);
+            @include sp-search(198px, 48px, -4px, -4px);
             overflow: hidden;
             text-indent: 100%;
             top: -4px;
@@ -48,7 +46,7 @@
 
         &--icon {
             @include h-centered(21px);
-            @include sp(21px, 21px, -3px, -60px);
+            @include sp-search(21px, 21px, -3px, -60px);
         }
     }
 }

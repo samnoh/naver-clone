@@ -1,12 +1,10 @@
-@mixin sp($width, $x, $y) {
-    @include size($width, 16px);
-    background: url('../assets/sp_nav.png') $x $y no-repeat;
-    display: inline-block;
+@mixin sp-assets($width, $x, $y) {
+    @include sp($url: '../assets/sp_nav.png', $width: $width, $height: 16px, $x: $x, $y: $y);
 }
 
 @mixin nth-sp($nth, $args...) {
     &:nth-child(#{$nth}) span:first-child {
-        @include sp($args...);
+        @include sp-assets($args...);
     }
 }
 
