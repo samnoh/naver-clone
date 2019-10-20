@@ -5,3 +5,14 @@
     overflow: hidden;
     position: absolute;
 }
+
+.v-divider {
+    @include size(1px, 14px);
+    background-color: $color-lightgray;
+    display: inline-block;
+    margin: 18px 16px 0;
+}
+
+.inline-block-box {
+    display: inline-block;
+}

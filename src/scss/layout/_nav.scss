@@ -9,20 +9,56 @@
 }
 
 .nav {
-    @include h-centered(1080px);
+    border-bottom: 1px solid $color-gray;
+    border-top: 1px solid $color-lightgray;
 
-    li {
-        @include nth-sp(1, 25px, 0, -285px);
-        @include nth-sp(2, 27px, -279px, -52px);
-        @include nth-sp(3, 40px, -100px, -182px);
-        @include nth-sp(4, 40px, -101px, -156px);
-        @include nth-sp(5, 26px, -279px, -156px);
-        @include nth-sp(6, 25px, -70px, -285px);
+    &__container {
+        @include h-centered(1080px, 46px);
+        @include relative();
+    }
 
+    &__ranking {
+        @include absolute($top: 16px, $right: 100px);
+
+        &--number {
+            color: $color-primary;
+            font-size: 16px;
+            margin-top: -9px;
+        }
+
+        &--title {
+            font-size: 14px;
+            letter-spacing: -1px;
+        }
+    }
+
+    ul {
         display: inline-block;
+        padding: 16px 0 0 4px;
 
-        &:not(:nth-child(1)) {
-            margin-left: 14px;
+        li {
+            @include nth-sp(1, 25px, 0, -285px);
+            @include nth-sp(2, 27px, -279px, -52px);
+            @include nth-sp(3, 40px, -100px, -182px);
+            @include nth-sp(4, 40px, -101px, -156px);
+            @include nth-sp(5, 26px, -279px, -156px);
+            @include nth-sp(6, 25px, -70px, -285px);
+            @include nth-sp(7, 35px, -125px, -131px);
+            @include nth-sp(8, 26px, -279px, -208px);
+            @include nth-sp(9, 26px, -128px, -104px);
+            @include nth-sp(10, 26px, -36px, -259px);
+            @include nth-sp(11, 39px, -151px, -156px);
+            @include nth-sp(12, 26px, -279px, -130px);
+            @include nth-sp(13, 26px, -234px, -233px);
+            @include nth-sp(14, 26px, -72px, -259px);
+            @include nth-sp(15, 13px, -140px, -78px);
+            @include nth-sp(16, 26px, -279px, 0);
+
+            display: inline-block;
+
+            &:not(:nth-child(1)) {
+                margin-left: 14px;
+            }
         }
     }
 }

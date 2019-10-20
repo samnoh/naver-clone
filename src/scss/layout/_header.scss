@@ -3,19 +3,35 @@
 }
 
 .header {
-    @include h-centered(1080px);
+    @include h-centered(1080px, 170px);
 
-    &__topnav {
+    &__top {
         float: right;
+        margin-top: 8px;
+
+        span {
+            color: $color-darkgray;
+            cursor: pointer;
+            font-size: 11px;
+            letter-spacing: -1px;
+            line-height: 22px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     &__search {
+        clear: both;
+        padding-top: 33px;
+
         a {
             vertical-align: middle;
         }
 
         &--title {
-            @include relative($top: -4px);
+            @include relative($bottom: 3px, $right: 2px);
             @include sp-search(198px, 48px, -4px, -4px);
             overflow: hidden;
             text-indent: 100%;
@@ -26,13 +42,26 @@
             @include relative();
             border: 2px solid $color-primary;
             display: inline-block;
-            margin-left: 20px;
+            margin-left: 21px;
             padding: 12px 0 12px 10px;
             vertical-align: middle;
         }
 
         &--input {
-            @include size(405px, 23px);
+            @include size(398px, 23px);
+            vertical-align: top;
+        }
+
+        &--keyboard {
+            @include sp-search(19px, 11px, -33px, -60px);
+            margin: 6px;
+            vertical-align: middle;
+        }
+
+        &--history {
+            @include sp-search(9px, 4px, -87px, -60px);
+            margin: 2px;
+            vertical-align: middle;
         }
 
         &--btn {

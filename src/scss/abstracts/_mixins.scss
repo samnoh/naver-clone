@@ -14,12 +14,13 @@
     @include position(relative, $args...);
 }
 
-@mixin size($width, $height) {
+@mixin size($width, $height: null) {
     height: $height;
     width: $width;
 }
 
-@mixin h-centered($width) {
+@mixin h-centered($width, $height: null) {
+    height: $height;
     margin: 0 auto;
     width: $width;
 }
