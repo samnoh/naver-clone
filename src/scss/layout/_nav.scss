@@ -1,8 +1,7 @@
 @mixin sp($width, $x, $y) {
+    @include size($width, 16px);
     background: url('../assets/sp_nav.png') $x $y no-repeat;
     display: inline-block;
-    height: 16px;
-    width: $width;
 }
 
 @mixin nth-sp($nth, $args...) {

@@ -1,8 +1,7 @@
 @mixin sp($width, $height, $x, $y) {
+    @include size($width, $height);
     background: url('../assets/sp_search.png') $x $y no-repeat;
     display: inline-block;
-    height: $height;
-    width: $width;
 }
 
 .header {
@@ -26,28 +25,25 @@
         }
 
         fieldset {
+            @include size(521px, 49px);
+            @include relative();
             border: 2px solid $color-primary;
             display: inline-block;
-            height: 49px;
             margin-left: 20px;
             padding: 12px 0 12px 10px;
-            position: relative;
             vertical-align: middle;
-            width: 521px;
         }
 
         &--input {
-            height: 23px;
+            @include size(405px, 23px);
             vertical-align: top;
-            width: 405px;
         }
 
         &--btn {
+            @include size(49px, 49px);
             @include absolute($right: -2px, $top: -2px);
             background-color: $color-primary;
             cursor: pointer;
-            height: 49px;
-            width: 49px;
         }
 
         &--icon {

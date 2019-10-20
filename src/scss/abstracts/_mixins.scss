@@ -14,6 +14,11 @@
     @include position(relative, $args...);
 }
 
+@mixin size($width, $height) {
+    height: $height;
+    width: $width;
+}
+
 @mixin h-centered($width) {
     margin: 0 auto;
     width: $width;
