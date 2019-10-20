@@ -19,7 +19,6 @@
             @include sp-search(198px, 48px, -4px, -4px);
             overflow: hidden;
             text-indent: 100%;
-            top: -4px;
         }
 
         fieldset {
@@ -34,7 +33,6 @@
 
         &--input {
             @include size(405px, 23px);
-            vertical-align: top;
         }
 
         &--btn {
