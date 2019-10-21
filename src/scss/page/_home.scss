@@ -247,7 +247,7 @@
         }
 
         &--shopping {
-            @include block(330px, 882px);
+            @include block(332px, 882px);
 
             iframe {
                 @include size(100%, 100%);
