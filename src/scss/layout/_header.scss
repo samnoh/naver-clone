@@ -37,6 +37,10 @@
             text-indent: 100%;
         }
 
+        form {
+            display: inline-block;
+        }
+
         fieldset {
             @include size(521px, 49px);
             @include relative();
@@ -49,6 +53,8 @@
 
         &--input {
             @include size(398px, 23px);
+            font-size: 18px;
+            font-weight: 700;
             vertical-align: top;
         }
 
@@ -68,7 +74,6 @@
             @include size(49px, 49px);
             @include absolute($right: -2px, $top: -2px);
             background-color: $color-primary;
-            cursor: pointer;
         }
 
         &--icon {

@@ -23,16 +23,18 @@
                     <h1 class="header__search--title">Naver</h1>
                 </a>
                 <h2 class="blind">검색창</h2>
-                <fieldset>
-                    <legend class="blind">검색</legend>
-                    <input class="header__search--input" type="text" />
-                    <span class="header__search--keyboard"></span>
-                    <span class="header__search--history"></span>
-                    <button class="header__search--btn">
-                        <span class="header__search--icon"></span>
-                        <span class="blind">검색</span>
-                    </button>
-                </fieldset>
+                <form action="https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8">
+                    <fieldset>
+                        <legend class="blind">검색</legend>
+                        <input class="header__search--input" type="text" name="query" maxlength="255" accesskey="s" autocomplete="off" title="검색어 입력" autofocus />
+                        <span class="header__search--keyboard"></span>
+                        <span class="header__search--history"></span>
+                        <button class="header__search--btn" type="submit">
+                            <span class="header__search--icon"></span>
+                            <span class="blind">검색</span>
+                        </button>
+                    </fieldset>
+                </form>
             </div>
         </div>
     </header>
@@ -107,7 +109,19 @@
         <div class="main__container">
             <div class="main__first-block">
                 <div class="main__first-block--ad"></div>
-                <div class="main__first-block--login"></div>
+                <div class="main__first-block--login">
+                    <h3 class="blind">로그인</h3>
+                    <div class="login">
+                        <span class="login__helper-text">네이버를 더 안전하고 편리하게 이용하세요.</span>
+                        <a href="" class="login__btn"><span></span><span class="blind">NAVER 로그인</span></a>
+                        <div class="help">
+                            <a class="help__btn" href="">아이디·비밀번호 찾기</a>
+                        </div>
+                        <div class="signup">
+                            <a class="signup__btn" href="">회원가입</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="main__second-block">
                 <div class="inline-block-box">

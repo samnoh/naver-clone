@@ -97,7 +97,7 @@
 
         &--list {
             border-bottom: 1px solid $color-lightgray;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
             padding-bottom: 4px;
 
             li {
@@ -118,21 +118,22 @@
         }
 
         &--footer {
+            overflow: hidden;
+
             div {
-                @include size(50%);
                 color: $color-darkgray;
                 display: inline-block;
             }
 
             div:first-child {
+                float: left;
                 font-size: 11px;
-                vertical-align: center;
             }
 
             div:last-child {
+                float: right;
                 font-size: 12px;
                 letter-spacing: -1px;
-                text-align: right;
             }
         }
     }
