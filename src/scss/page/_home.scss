@@ -7,8 +7,6 @@
 
 .main {
     background-color: $color-main-bg;
-    display: inline-block;
-    width: 100%;
 
     &__container {
         @include h-centered(1100px);
@@ -16,19 +14,22 @@
     }
 
     &__first-block {
+        margin-bottom: 8px;
+
         &--ad {
             @include block(740px, 120px);
             background-color: $color-gray;
-            margin: 0 8px 8px 0;
+            margin-right: 8px;
         }
 
         &--login {
             @include block(332px, 120px);
-            margin-bottom: 8px;
         }
     }
 
     &__second-block {
+        margin-bottom: 8px;
+
         .inline-block-box:first-child {
             @include size(740px);
             margin-right: 8px;
@@ -51,7 +52,7 @@
 
         &--newsstand {
             @include block(740px, 246px);
-            margin: 0 8px 8px 0;
+            margin-right: 8px;
 
             h3 {
                 border-bottom: 1px solid $color-lightgray;
@@ -59,9 +60,9 @@
             }
 
             li {
-                @include size(123.3px, 67px);
+                @include size(calc(100% / 6), 67px);
                 border-bottom: 1px solid $color-lightgray;
-                border-right: 1px solid $color-lightgray;
+                border-left: 1px solid $color-lightgray;
                 float: left;
 
                 img {
@@ -81,19 +82,23 @@
         &--ad {
             @include block(332px, 150px);
             background-color: $color-gray;
-            margin-bottom: 8px;
         }
     }
 
     &__third-block {
+        margin-bottom: 8px;
+
         &--category {
-            @include block(740px, 837px);
-            margin: 0 8px 8px 0;
+            @include block(740px, 882px);
+            margin-right: 8px;
         }
 
         &--shopping {
-            @include block(332px, 837px);
-            margin-bottom: 8px;
+            @include block(330px, 882px);
+
+            iframe {
+                @include size(100%, 100%);
+            }
         }
     }
 
