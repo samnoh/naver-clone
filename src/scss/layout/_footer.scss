@@ -1,0 +1,7 @@
+.footer {
+    padding: 30px;
+
+    &__container {
+        @include h-centered(1080px);
+    }
+}
