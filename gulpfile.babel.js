@@ -37,7 +37,7 @@ const clean = () => del([routes.build.dest]);
 const html = () =>
     gulp
         .src(routes.html.src)
-        .pipe(gulpHtml({ collapseWhitespace: true }))
+        .pipe(gulpHtml({ collapseWhitespace: true, collapseInlineTagWhitespace: true }))
         .pipe(gulp.dest(routes.html.dest))
         .pipe(gulpConnect.reload());
 

@@ -14,7 +14,7 @@
     @include position(relative, $args...);
 }
 
-@mixin size($width, $height: null) {
+@mixin size($width: null, $height: null) {
     height: $height;
     width: $width;
 }

@@ -10,6 +10,10 @@
     @include sp('../assets/sp_login.png', $args...);
 }
 
+@mixin sp-themecast($args...) {
+    @include sp('../assets/sp_themecast.png', $args...);
+}
+
 .main {
     background-color: $color-main-bg;
 
@@ -85,10 +89,28 @@
         &--news {
             @include block(740px, 46px);
             margin-bottom: 8px;
+            padding: 15px 0 0 16px;
 
             h3,
             ol {
                 display: inline-block;
+            }
+
+            h3 {
+                font-size: 14px;
+                font-weight: 700;
+                font-weight: 600;
+                letter-spacing: -1px;
+                line-height: 16px;
+                margin-right: 12px;
+            }
+
+            ol {
+                vertical-align: middle;
+
+                li {
+                    font-size: 12px;
+                }
             }
         }
 
@@ -96,9 +118,19 @@
             @include block(740px, 246px);
             margin-right: 8px;
 
-            h3 {
+            div {
+                @include size($height: 45px);
                 border-bottom: 1px solid $color-lightgray;
                 height: 45px;
+                padding: 13px 0 0 16px;
+
+                h3 {
+                    font-size: 14px;
+                    font-weight: 700;
+                    font-weight: 600;
+                    letter-spacing: -1px;
+                    line-height: 16px;
+                }
             }
 
             li {
@@ -131,8 +163,87 @@
         margin-bottom: 8px;
 
         &--category {
-            @include block(740px, 882px);
+            @include block(738px, 884px);
             margin-right: 8px;
+        }
+
+        .subject-list {
+            @include size(738px, 45px);
+            border-bottom: 1px solid $color-gray;
+
+            &__item {
+                @include size(601px, 45px);
+                @include relative();
+                display: inline-block;
+                vertical-align: top;
+
+                ul {
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+
+                li {
+                    @include size($height: 45px);
+                    display: inline-block;
+                    font-size: 14px;
+                    margin-right: 10px;
+                    padding: 14px 7px 0;
+
+                    &.highlight {
+                        border-bottom: 3px solid $color-orange;
+                        color: $color-orange;
+                        font-weight: 700;
+                    }
+                }
+
+                &--opacity {
+                    @include size(15px, 44px);
+                    background-color: $color-white;
+                    opacity: 0.4;
+
+                    &.left {
+                        @include absolute($top: 0, $left: 0);
+                    }
+
+                    &.right {
+                        @include absolute($top: 0, $right: 0);
+                    }
+                }
+            }
+
+            &__btn {
+                &--all,
+                &--prev,
+                &--next {
+                    @include size(45px, 45px);
+                    @include relative();
+                    background-color: transparent;
+                    border-left: 1px solid $color-gray;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+                &--all {
+                    border-left: none;
+                    border-right: 1px solid $color-gray;
+
+                    span:first-child {
+                        @include sp-themecast(20px, 14px, -218px, -257px);
+                    }
+                }
+
+                &--prev {
+                    span:first-child {
+                        @include sp-themecast(8px, 16px, -320px, 0);
+                    }
+                }
+
+                &--next {
+                    span:first-child {
+                        @include sp-themecast(8px, 16px, -320px, -52px);
+                    }
+                }
+            }
         }
 
         &--shopping {

@@ -132,7 +132,9 @@
                         </ol>
                     </div>
                     <div class="main__second-block--newsstand">
-                        <h3>뉴스스탠드</h3>
+                        <div>
+                            <h3>뉴스스탠드</h3>
+                        </div>
                         <ul>
                             <li><img src="assets/과학동아.png" alt="과학동아" /></li>
                             <li><img src="assets/매일경제.png" alt="매일경제" /></li>
@@ -162,7 +164,32 @@
             </div>
             <div class="main__third-block">
                 <div class="main__third-block--category">
-                    <h3>주제별 보기</h3>
+                    <div class="subject-list">
+                        <button class="subject-list__btn--all"><span></span><span class="blind">전체 주제 열기</span></button>
+                        <div class="subject-list__item">
+                            <div class="subject-list__item--opacity left"></div>
+                            <ul>
+                                <li>리빙</li>
+                                <li class="highlight">푸드</li>
+                                <li>스포츠</li>
+                                <li>자동차</li>
+                                <li>패션뷰티</li>
+                                <li>부모i</li>
+                                <li>건강</li>
+                                <li>웹툰</li>
+                                <li>게임</li>
+                                <li>티비</li>
+                                <li>TV연예</li>
+                                <li>뮤직</li>
+                                <li>영화</li>
+                                <li>책문화</li>
+                            </ul>
+                            <div class="subject-list__item--opacity right"></div>
+                        </div>
+                        <button class="subject-list__btn--prev"><span></span><span class="blind">이전 주제</span></button>
+                        <button class="subject-list__btn--next"><span></span><span class="blind">다음 주제</span></button>
+                    </div>
+                    <h3 class="blind">주제별 보기</h3>
                 </div>
                 <div class="main__third-block--shopping">
                     <iframe src="https://castbox.shopping.naver.com/shopbox/main.nhn?" frameborder="0" scrolling="no"></iframe>
@@ -170,7 +197,7 @@
             </div>
             <div class="main__fourth-block">
                 <div class="main__fourth-block--event">
-                    <h3>이벤트</h3>
+                    <h3 class="blind">이벤트</h3>
                 </div>
                 <div class="main__fourth-block--ad"></div>
             </div>
