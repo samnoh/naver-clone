@@ -5,4 +5,6 @@
 
 ## Screenshot
 
-<img src="img/main.png" width="100%" />
+<kbd>
+    <img src="img/main.png" width="100%" />
+</kdb>
